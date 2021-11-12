@@ -1,0 +1,29 @@
+<h2> All Polls</h2>
+      <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th> Question</th>
+                <th> Category </th>
+                <th> Option1 </th>
+                <th> Option2 </th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr *ngFor = "let pl of polls" >
+            <td> {{ pl.question }} </td>
+            <td> {{ pl.category }} </td>
+            <td> {{ pl.option1 }} </td>
+            <td> {{ pl.option2 }} </td>
+            <td> 
+                <button (click)="updatepoll(pl.id)" class="btn btn-info">Update</button>
+            </td>
+            <!--
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button> -->
+            <!-- </td> -->
+        </tr>
+        
+    </tbody>
+    
+</table>
